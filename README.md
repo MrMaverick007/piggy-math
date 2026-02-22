@@ -31,7 +31,7 @@ A fast, lightweight math trainer built with Python and Tkinter. Practice your ar
 ### Run it
 
 ```bash
-git clone https://github.com/yourusername/piggy-math.git
+git clone https://github.com/MrMaverick007/piggy-math.git
 cd piggy-math
 python piggy_math.py
 ```
