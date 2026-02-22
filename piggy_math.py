@@ -85,17 +85,20 @@ def start_game():
         game_decimal_hint.place(relx=0.5, rely=0.52, anchor='n')
         create_problem()
 
-# check if input is valid
 def make_validator(max_len):
     def validate_input(new_value):
-        if new_value == "":
+        if new_value == "" or new_value == "-":
             return True
-        return new_value.isdigit() and len(new_value) <= max_len
+        try:
+            int(new_value)
+            return len(new_value) <= max_len
+        except ValueError:
+            return False
     return validate_input
 
 def make_answer_validator(max_len):
     def validate_input(new_value):
-        if new_value == "":
+        if new_value == "" or new_value == "-":
             return True
         try:
             float(new_value)
